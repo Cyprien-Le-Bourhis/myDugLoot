@@ -4,16 +4,31 @@
   >
     <div class="row">
       <div class="col">
-        <h2 class="mb-5"><sup class="m-2">My</sup>DugLoot</h2>
+        <h2 class="mb-5"><sup class="m-2">My</sup>{{key}}</h2>
       </div>
     </div>
     <div class="_badge-bundle d-flex justify-content-center align-items-center">
+      <!-- <div class="_A_shadow legendary">
+        <div class="_A_levitate">
+          <div class="_badge set">
+            <div class="_pattern"></div>
+            <div class="_item">
+              <i class="fas fa-frog"></i>
+            </div>
+          </div>
+        </div>
+      </div> -->
       <div class="_A_shadow legendary">
         <div class="_A_levitate">
           <div class="_badge legendary">
             <div class="_pattern"></div>
             <div class="_item">
               <i class="fas fa-frog"></i>
+              <div class="_wallet_jewel">
+                <div class="_jewel"></div>
+                <div class="_jewel"></div>
+                <div class="_jewel"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -24,6 +39,7 @@
             <div class="_pattern"></div>
             <div class="_item">
               <i class="fas fa-hard-hat"></i>
+              <div class="_jewel"></div>
             </div>
           </div>
         </div>
@@ -56,7 +72,7 @@
 import { Vue } from "vue-class-component";
 
 export default class Place extends Vue {
-  key = "Lootor";
+  key = "DugLoot";
 }
 </script>
 
@@ -215,6 +231,41 @@ $animation-timing: 4s;
   box-shadow: inset 1px 2px 24px 4px rgba(#000, 0.6),
     1px 2px 24px 4px rgba(#000, 0.2);
   &.legendary {
+    ._jewel{
+      &::before {
+    border-radius: 20px;
+    display: block;
+    content: "";
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.8) 0%,
+      rgba(255, 255, 255, 0) 50%
+    );
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 2px;
+  }
+      width: 15px;
+      height: 20px;
+        background: radial-gradient(
+      circle,
+      rgb(214, 203, 48) 0%,
+      rgb(214, 203, 48) 20%,
+     
+    );
+     border: 3px solid white;
+  box-shadow: 
+    1px 2px 24px 4px rgba(#000, 0.2);
+
+    border-radius: 50%;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      
+      transform: translate(-50%,50%);
+    }
     ._pattern {
       border-radius: 100%;
       animation: rotate $animation-timing * 4 linear infinite;
@@ -236,6 +287,23 @@ $animation-timing: 4s;
       box-shadow: 0px 0px 150px 4px rgba(255, 174, 0, 0.4);
     }
   }
+  &.set {
+    ._pattern {
+      border-radius: 100%;
+      animation: rotate $animation-timing * 4 linear infinite;
+      opacity: 0.02;
+      background-size: 350%;
+      background-position: center center;
+      background-image: url(./../assets/legendary.svg);
+    }
+   background: radial-gradient(circle, rgba(206,255,0,1) 0%, rgba(56,227,25,1) 50%, rgba(2,122,0,1) 100%);
+    &:after {
+      box-shadow: 0px 0px 60px 4px rgba(206,255,0,2);
+    }
+    &:hover {
+      box-shadow: 0px 0px 150px 4px rgba(206,255,0,2);
+    }
+  }
   ._pattern {
     border-radius: 20px;
     position: absolute;
@@ -247,6 +315,41 @@ $animation-timing: 4s;
     background-size: cover;
   }
   &.epic {
+       ._jewel{
+      &::before {
+    border-radius: 20px;
+    display: block;
+    content: "";
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.8) 0%,
+      rgba(255, 255, 255, 0) 50%
+    );
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 2px;
+  }
+      width: 15px;
+      height: 20px;
+        background: radial-gradient(
+      circle,
+      rgba(255, 128, 231, 1) 0%,
+      rgba(239, 0, 255, 1) 0%,
+     
+    );
+     border: 3px solid white;
+  box-shadow: 
+    1px 2px 24px 4px rgba(#000, 0.2);
+
+    border-radius: 50% 0;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      
+      transform: translate(-50%,50%);
+    }
     ._pattern {
       opacity: 0.05;
       background-image: url(./../assets/epic.svg);
