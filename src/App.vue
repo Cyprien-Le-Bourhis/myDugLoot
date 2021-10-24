@@ -1,0 +1,39 @@
+<template>
+  <Place />
+</template>
+
+<script lang="ts">
+import { Options, Vue } from "vue-class-component";
+import Place from "./components/Place.vue";
+
+@Options({
+  components: {
+    Place,
+  },
+})
+export default class App extends Vue {
+  customColor = "#E6512E";
+}
+</script>
+
+<style lang="scss" >
+$primary: #75382a;
+$secondary: #2ba393;
+$bg: rgb(43, 41, 41);
+@import "~@/../../node_modules/bootstrap/scss/bootstrap.scss";
+
+html,
+body {
+  height: 100%;
+  background-color: $bg;
+}
+#app {
+  height: 100%;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
