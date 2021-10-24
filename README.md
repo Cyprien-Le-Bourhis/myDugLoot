@@ -1,4 +1,4 @@
-# lootor
+# myDugloot
 
 ## Project setup
 ```
