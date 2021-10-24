@@ -30,6 +30,9 @@ body {
 }
 h2 {
   font-size: 3rem;
+  sup {
+    font-size: 1rem;
+  }
   font-family: "MedievalSharp", cursive !important;
 }
 #app {

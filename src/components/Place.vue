@@ -4,7 +4,7 @@
   >
     <div class="row">
       <div class="col">
-        <h2 class="mb-5">MydugLoot</h2>
+        <h2 class="mb-5"><sup class="m-2">My</sup>DugLoot</h2>
       </div>
     </div>
     <div class="_badge-bundle d-flex justify-content-center align-items-center">
@@ -12,6 +12,9 @@
         <div class="_A_levitate">
           <div class="_badge legendary">
             <div class="_pattern"></div>
+            <div class="_item">
+              <i class="fas fa-frog"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -19,6 +22,9 @@
         <div class="_A_levitate">
           <div class="_badge epic">
             <div class="_pattern"></div>
+            <div class="_item">
+              <i class="fas fa-hard-hat"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -26,6 +32,9 @@
         <div class="_A_levitate">
           <div class="_badge rare">
             <div class="_pattern"></div>
+            <div class="_item">
+              <i class="fas fa-hat-wizard"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -33,6 +42,9 @@
         <div class="_A_levitate">
           <div class="_badge common">
             <div class="_pattern"></div>
+            <div class="_item">
+              <i class="fas fa-hard-hat"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -50,7 +62,7 @@ export default class Place extends Vue {
 
 <style lang="scss" scoped>
 $children: 4;
-$animation-timing: 1.5s;
+$animation-timing: 4s;
 * {
   color: #fff;
 }
@@ -141,6 +153,14 @@ $animation-timing: 1.5s;
 }
 
 ._badge {
+  ._item {
+    > i {
+      opacity: 0.9;
+      font-size: 3rem;
+      text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
+    }
+  }
+
   transition: all 0.1s ease-in-out;
   cursor: pointer;
   &:hover {
@@ -185,6 +205,9 @@ $animation-timing: 1.5s;
     display: block;
   }
   margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100px;
   width: 100px;
   border-radius: 20px;
