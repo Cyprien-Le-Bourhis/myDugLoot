@@ -21,11 +21,16 @@ $primary: #75382a;
 $secondary: #2ba393;
 $bg: rgb(43, 41, 41);
 @import "~@/../../node_modules/bootstrap/scss/bootstrap.scss";
-
+@import url("https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap");
 html,
 body {
   height: 100%;
   background-color: $bg;
+  font-family: "MedievalSharp", cursive !important;
+}
+h2 {
+  font-size: 3rem;
+  font-family: "MedievalSharp", cursive !important;
 }
 #app {
   height: 100%;

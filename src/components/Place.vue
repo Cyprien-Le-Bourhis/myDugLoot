@@ -1,5 +1,12 @@
 <template>
-  <div class="d-flex justify-content-center align-items-center h-100">
+  <div
+    class="d-flex flex-column justify-content-center align-items-center h-100"
+  >
+    <div class="row">
+      <div class="col">
+        <h2 class="mb-5">MydugLoot</h2>
+      </div>
+    </div>
     <div class="_badge-bundle d-flex justify-content-center align-items-center">
       <div class="_A_shadow legendary">
         <div class="_A_levitate">
